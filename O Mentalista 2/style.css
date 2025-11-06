@@ -1,0 +1,200 @@
+/* Reset CSS */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span,
+h1, h2, h3, h4, h5, h6, p, 
+a,  big, em, img, 
+small, strike, strong, sub, sup,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+
+/* Meu CSS */
+:root {
+    --color-light: #fff;
+    --color-dark: #000;
+    --color-dark-light: #607d8b;
+}
+
+body {
+    font-family: "Roboto", monospace;
+    background: radial-gradient(96.16% 190.17% at 96.91% 95.41%, rgba(205, 153, 202, 0.83) 34.37%, #8CC6F4 50.61%, #4B84CB 78.46%);
+    background-attachment: fixed;
+    min-width: 320px;
+}
+
+.main-title {
+    color: var(--color-light);
+    text-shadow: 2px 2px 1px var(--color-dark);
+    text-align: center;
+    height: 10vh;
+    line-height: 10vh;
+    font-size: 7vh;
+}
+
+.main-container {
+    display: flex;
+    border: 1px solid red;
+    height: calc(var(--vh, 1vh) * 90);
+}
+
+.speak-balloon {
+    background-color: var(--color-light);
+    border: 2px solid var(--color-dark);
+    border-radius: 1%;
+    box-shadow: 0px 2px 4px 1px var(--color-dark-light);
+    box-sizing: border-box;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    text-align: center;
+}
+
+.suika-area {
+    position: relative;
+    display: flex;
+    flex-basis: 50%;
+    border: 1px solid blue;
+    align-items: flex-end;
+    justify-content: space-evenly;
+}
+
+.suika-area .image {
+    width: 40%;
+    height: 50%;
+    border: 1px solid green;
+}
+.suika-area .full-image > img {
+    object-fit: contain;
+    object-position: bottom;
+}
+
+.full-image > img {
+    width: 100%;
+    height: 100%;
+}
+
+.suika-area .speak-balloon {
+    width: 40%;
+    min-height: 15%;
+    position: relative;
+    bottom: 10%;
+    border-radius: 7px 100px 100px 32px;
+    justify-content: space-evenly;
+    padding: 1%;
+}
+
+.gen-area {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-end;
+    flex-basis: 50%;
+    border: 1px solid green;
+}
+
+.gen-area > .image {
+    height: 60%;
+    min-width: 30%;
+    border: 1px solid lime;
+}
+
+.gen-area > .full-image > img {
+    object-fit: contain;
+    object-position: bottom right;
+}
+
+.gen-area > .speak-balloon {
+    align-self: flex-start;
+    width: 70%;
+    min-height: 30%;
+    border-radius: 200px 100px 17px 200px;
+    padding: 4%;
+    justify-content: space-around;
+}
+
+.removed {
+    display: none;
+}
+
+.shout-area {
+    font-size: larger;
+}
+
+/*  Tablet */
+@media (max-width: 720px) {
+    .gen-area > .speak-balloon {
+        width: 90%;
+        align-self: center;
+    }
+    .suika-area > .speak-balloon {
+        width: 60%;
+        bottom: 30%;
+        border-radius: 32px 100px 100px 7px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 500px) {
+    .main-container {
+        flex-direction: column;
+        height: calc(var(--vh, 1vh) * 100);
+    }
+    .main-title {
+        font-size: 5vh;
+    }
+    .suika-area {
+        height: 20%;
+    }
+    .suika-area > .speak-balloon {
+        align-self: flex-start;
+        bottom: -10%;
+        min-height: 40%;
+        row-gap: 0.5em;
+    }
+
+    .suika-area .image {
+        width: 30%;
+        height: 90%;
+    }
+    .suika-area .full-image > img {
+        object-fit: contain;
+        object-position: bottom left;
+    }
+
+    .gen-area {
+        height: 80%;
+        justify-content: space-between;
+    }
+    .gen-area > .speak-balloon {
+        height: 30%;
+        align-self: flex-start;
+        justify-content: space-evenly;
+        padding: 0% 2% 0% 4%;
+    }
+    .gen-area > .image {
+        height: 70%;
+    }
+}

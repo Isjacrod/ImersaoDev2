@@ -1,0 +1,22 @@
+body {
+    height: 100vh;
+    background: linear-gradient(90deg, white 60%, gray);
+    display: flex;
+    align-items: center;
+}
+#_calc_placeholder {
+    position: relative;
+    max-width: 50vw;
+}
+#_calc_placeholder > .calculator-image {
+    width: 100%;
+}
+#_calc_placeholder > #btn-screen {
+    background-color: #78a393;
+}
+.buttons {
+    position: absolute;
+    box-sizing: border-box;
+    cursor: pointer;
+    /*border: 1px solid red*/
+}

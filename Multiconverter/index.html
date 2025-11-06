@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Multiconverter</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="page-title">Multiconverter</h1>
+        <article class="separate-area converterarea">
+            <div class="units-wrapper">
+                <div class="column-element -unidadeA">
+                    <input class="input-text" type="number" id="unidade_a" step="any">
+                    <label class="input-label" for="unidade_a">Dolár</label>
+                </div>
+                <span class="convertericon"></span>
+                <div class="column-element -unidadeB">
+                    <input class="input-text" type="number" id="unidade_b" step="any">
+                    <label class="input-label" for="unidade_b">Real</label>
+                </div>
+            </div>
+        </article>
+        <nav class="separate-area -converteroptions">
+            <input type="radio" name="unidades" id="dolar_real" class="hidden-button" checked="true">
+            <label class="main-button" for="dolar_real">Dólar &harr; Real</label>
+            <input type="radio" name="unidades" id="f_c" class="hidden-button">
+            <label class="main-button" for="f_c">ºF &harr; ºC</label>
+            <input type="radio" name="unidades" id="km_ly" class="hidden-button">
+            <label class="main-button" for="km_ly">Km &harr; Anos Luz</label>
+            <input type="radio" name="unidades" id="btc_real" class="hidden-button">
+            <label class="main-button" for="btc_real">Bitcoin &harr; Real</label>
+        </nav>
+    </div>
+    <script src="main.js"></script>
+    
+</body>
+
+</html>

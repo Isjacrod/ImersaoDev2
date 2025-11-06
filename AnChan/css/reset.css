@@ -1,0 +1,5 @@
+body, div, header, footer, img, figure, button, p {
+    margin: 0;
+    padding: 0;
+    border: none;
+}

@@ -1,0 +1,52 @@
+.info-exibe {
+    display: flex;
+}
+
+#info-container {
+    /*.info-oculta {display: none}*/
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0px;
+}
+
+.info-oculta {
+    display: none;
+}
+  
+#info-wrapper {
+    width: 90%;
+    height: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+  
+#fecha-info {
+    position: absolute;
+    top: 0;
+    margin: 5px auto;
+    background-color: hotpink;
+    border: 2px solid purple;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+}
+
+#fecha-info::after {
+    content: '×';
+    color: aqua;
+    font-size: 19px;
+    font-weight: bolder;
+}
+
+#info {
+    width: 100%;
+    height: 100%;
+    border: 1px solid fuchsia;
+    border-radius: 10px;
+    box-shadow: 1px 1px 20px 1px black;
+    background-color: white;
+}
+  

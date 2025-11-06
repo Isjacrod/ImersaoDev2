@@ -1,0 +1,313 @@
+:root {
+  --fixed-color-3: #FF4081;
+  --fixed-color-4: #111;
+  --fixed-color-5: #03A9F4;
+  --fixed-color-6: #fefefe;
+}
+body.light {
+  --color-1: #fefefe;
+  --color-2: #111;
+  --color-7: #eee;
+}
+
+body.dark {
+  --color-1: #111;
+  --color-2: #fefefe;
+  --color-7: #333;
+}
+
+body {
+  /* Gradient Source: https://cssgradient.io/swatches/  (disco club) */
+  background-image: linear-gradient(90deg, #FC466B 0%, #3F5EFB 100%);
+  font-family: sans-serif;
+  padding: 10px;
+  color: var(--color-2);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 95vh;
+}
+
+.certificard {
+  background-color: var(--color-1);
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 6px 9px 10px var(--fixed-color-3), -6px -9px 10px var(--fixed-color-5);
+  min-width: 560px;
+  max-width: 80%;
+  margin: auto;
+}
+.header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /*background-image: url('https://i.gifer.com/WV5g.gif');*/
+  background-image: linear-gradient(0deg, var(--fixed-color-5), blueviolet, fuchsia);
+  border-radius: 5px;
+  padding: 10px;
+}
+.header > .profile-image {
+  cursor: wait;
+  border-radius: 100%;
+  border: 8px solid var(--fixed-color-6);
+  width: 100px;
+  height: 100px;
+  box-shadow: 2px 9px 10px 1px violet;
+}
+.header .title {
+  font-size: 1.4em;
+  text-align: center;
+  color: var(--fixed-color-6);
+}
+
+.header > .profile-image:active + .title::after {
+  opacity: 1;
+}
+.header .title::after {
+  content: '❤';
+  opacity: 0;
+  transition: opacity 300ms ease-out;
+}
+
+.button {
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 20px;
+  color: var(--color-2);
+  background-color: var(--color-7);
+  border: none;
+  box-shadow: 1px 1px 1px var(--color-2);
+}
+.header > .buttonsWrapper {
+  align-self: flex-start;
+  display: flex; 
+  flex-direction: column;
+  align-items: flex-end;
+}
+.header > .buttonsWrapper > .button {
+  margin-bottom: 0.3em;
+  color: var(--fixed-color-4);
+  background-color: var(--fixed-color-6);
+  box-shadow: 1px 1px 1px var(--fixed-color-4);
+}
+
+.zoom-options {
+  display: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+.zoom-options .zoom-control {
+  width: 4em;
+  border: none;
+  padding: 0.5em;
+  line-height: 0.8em;
+  font-size: 0.8em;
+  background-color: var(--color-1);
+  border-radius: 20px;
+  color: var(--color-2);
+}
+
+.insignias {
+  padding: 15px;
+  border-radius: 5px;
+  line-height: 1.8em;
+}
+
+.insignias h2 {
+  font-size: 1.2em;
+  margin-top: 1px;
+  color: var(--color-2);
+  text-align: center;
+}
+
+/* Code Pen Container */
+.projects > .project-card .cp_embed_iframe {
+  border-radius: 5px;
+  box-shadow: 3px 3px 5px var(--fixed-color-4);
+  border: 1px solid var(--fixed-color-5);
+}
+.projects > .project-card .cp_embed_wrapper {
+  width: inherit;
+  height: inherit;
+}
+
+/* Projects default mode */
+.projects {
+  background-color: var(--color-7);
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid var(--fixed-color-5);
+}
+.projects > .project-card > .item-checkbox {
+  display: none;
+}
+.projects > .project-card:hover .item-label {
+  color: var(--fixed-color-3);
+}
+
+/* Projects List Mode */
+.projects-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.projects-list > .project-card {
+  position: relative;
+  width: 500px;
+}
+.projects-list > .project-card > .item-checkbox:checked ~ .cp_embed_wrapper {
+  display: block;
+  opacity: 1;
+  z-index: 1;
+}
+.projects-list > .project-card > .item-checkbox:checked + .item-label {
+  color: var(--fixed-color-5);
+}
+.projects-list > .project-card > .item-label {
+  cursor: pointer;
+}
+.projects-list > .project-card:hover > .item-checkbox:checked ~ .cp_embed_wrapper {
+  z-index: 2;
+}
+.projects-list > .project-card > .cp_embed_wrapper {
+  position: absolute;
+  left: 250px;
+  bottom: -150px;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 100ms linear;
+}
+
+/* Projects Grid Mode */
+.projects {
+  --card-width: 260px;
+  --card-height: 260px;
+  --card-base: 600px;
+  --card-scale: 0.58;
+}
+.projects-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.projects-grid > .zoom-options {
+  display: initial;
+  width: 100%;
+  text-align: right;
+}
+.projects-grid > .project-card {
+  min-width: calc( var(--card-width, 350px) + 2em);
+  height: var(--card-height, 350px);
+  margin: 0.5em 0.5em 2.5em 0.5em;
+  flex-grow: 1;
+}
+.projects-grid > .project-card:last-child {
+  display: none;
+}
+.projects-grid > .project-card > .cp_embed_wrapper > .cp_embed_iframe {
+  transform: scale(var(--card-scale));
+  min-width: calc(100% * calc( 1 / var(--card-scale)));
+  height: calc(100% * calc(1 / var(--card-scale)));
+  transform-origin: 0 0;
+}
+
+.contacts .image {
+  height: 25px;
+  width: 25px;
+  border-radius: 100%;
+  filter: invert(1);
+}
+
+.contacts .image:hover {
+  filter: invert(0);
+}
+
+.contacts {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 6px;
+  display: flex;
+  justify-content: flex-end;  
+}
+
+
+/* Break points */ 
+@media (max-width: 1064px) {
+  body {
+     padding: 5px;
+  }
+  .projects-list {
+    align-items: stretch;
+  }
+  .projects-list > .project-card {
+    width: 100%;
+  }
+  /* List mode */
+  .projects-list > .project-card > .cp_embed_wrapper {
+    position: static;
+    width: 100%;
+    height: 410px;
+    display: none;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 100ms linear;
+    margin-bottom: 1em;
+  }
+  .projects-list > .project-card > .cp_embed_wrapper > .cp_embed_iframe {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    margin: 10px auto;
+    min-height: auto;
+  }
+  .header > .profile-image {
+    max-height: 60px;
+    max-width: 60px;
+    border-width: 3px;
+  }
+  .header > .buttonsWrapper {
+    display: inline-block;
+    text-align: right;
+  }
+  .projects-list > .project-card > .item-label {
+    line-height: 2em;
+  }
+}
+
+@media (max-width: 900px) {
+  .insignias {
+    padding: 0;
+  }
+  .certificard {
+    padding: 7px;
+    min-width: 95%;
+  }
+  .projects-grid > .zoom-options {
+    display: none;
+  }
+  .projects-grid > .project-card {
+    min-width: calc(240px + 2em);
+    height: 350px;
+    margin: 0.5em 0.5em 2.5em 0.5em;
+    flex-grow: 1;
+  }
+  .projects-grid > .project-card > .cp_embed_wrapper {
+    width: 100%;
+  }
+  .projects-grid > .project-card > .cp_embed_wrapper > .cp_embed_iframe {
+    transform: scale(0.8);
+    min-width: 125%;
+    height: 120%;
+    transform-origin: 0 0;
+  }
+}

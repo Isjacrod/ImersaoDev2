@@ -1,0 +1,177 @@
+/* Reset CSS */
+div, p, dialog, table, td, tr, thead, tbody, h1, h2, h3, footer, header, nav, ol, ul, li {
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+:root, ::backdrop {
+  --main-color-dark: black;
+  --main-color-1: deepskyblue;
+  --main-color-2: fuchsia;
+  --main-color-3: gold;
+  --main-color-white: white;
+  --main-color-dark-transparent: rgba(0, 0, 0, 0.6);
+  --main-color-white-transparent: rgba(255,255,255,0.4);
+}
+
+.new-player-form {
+  color: var(--main-color-white);
+  padding: 50px;
+  background: var(--main-color-2);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border: 3px solid var(--main-color-dark);
+}
+
+.new-player-form label {
+  text-shadow: 1px 1px var(--main-color-dark);
+}
+
+#new-player-dialog {
+  margin: auto;
+}
+
+#new-player-dialog::backdrop {
+  background-color: var(--main-color-dark-transparent);
+}
+
+.text-input {
+  border: 3px solid var(--main-color-dark);
+  border-radius: 3px;
+  text-align: center;
+}
+
+.new-player-form > .text-input {
+  height: 50px;
+  width: 300px;
+  margin-top: 2em;
+}
+
+.main-button:hover, button:hover {
+  cursor: pointer;
+  background-color: var(--main-color-3);
+}
+
+.main-button {
+  background-color: var(--main-color-1);
+  color: var(--main-color-white);
+  border: 3px solid var(--main-color-dark);
+  padding: 15px;
+  text-shadow: 1px 1px var(--main-color-dark);
+  margin: 10px;
+}
+
+.main-button:disabled {
+  display: none;
+}
+
+.new-player-form .main-button {
+  margin-top: 1em;
+}
+
+body {
+    font-family: 'Roboto Mono', monospace;
+    min-height: 90vh;
+    background-image: url('https://image.freepik.com/vetores-gratis/jogo-da-velha-icone-de-contorno-linear-de-neon_7280-2421.jpg');
+    background-color: #090d2b;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+    height: 100vh;
+}
+
+.page-title {
+    color: #ffffff;
+    margin: 0 0 5px;
+}
+
+.page-subtitle {
+    color: #ffffff;
+    margin-top: 5px;
+}
+
+.page-logo {
+    width: 200px;
+}
+
+.alura-logo {
+    width: 40px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+table {
+    border: 2px solid deepskyblue;
+    border-collapse: separate;
+    border-spacing: 4px;
+    color: var(--main-color-white);
+}
+
+#tabela_pontuacao {
+  width: 100%;
+  margin: 10px auto;
+}
+
+h1 {
+    color: white;
+}
+
+
+
+td, th {
+    background-color: var(--main-color-dark-transparent);
+}
+
+td {
+  border: solid 2px var(--main-color-2);
+}
+
+td img {
+  height: 40px;
+  width: 40px;
+}
+
+.center-column {
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Emoji pointer */
+/* https://dev.to/alvarosabu/use-custom-emoji-as-a-cursor-using-css-3j7 */
+#tabuleiro.-cross td {
+  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>❌</text></svg>")
+  16 0, auto;
+}
+#tabuleiro.-circle td {
+  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>⭕</text></svg>")
+  16 0, auto;
+}
+
+#tabuleiro td {
+  height: 3em;
+  width: 3em;
+}
+
+#tabuleiro tr {
+  height: 35px;
+  width: 200px;
+}
+
+#div-jogo-velha {
+  width: 200px;
+}

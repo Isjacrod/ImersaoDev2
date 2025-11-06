@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CodePen - Certificard</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body class="light">
+  <div class="container">
+    <section id="_certificard_" class="certificard">
+      <header class="header">
+        <img class="profile-image" img src="https://unavatar.now.sh/github/Isjacrod" />
+        <h1 class="title"> Isjacrod </h1>
+        <div class="buttonsWrapper">
+          <button class="button -modo" onclick="mudaVisualizacao()"> Mudar Visualização</button>
+          <button class="button -theme" onclick="mudarTema()">Mudar Tema</button>
+        </div>
+        <div class="contacts">
+          <a href="https://github.com/Isjacrod" target="_blank">
+            <img class="image" src="https://i.pinimg.com/474x/d0/4f/ac/d04facd5c90ee22861bb85ef67e32ad6.jpg">
+          </a>
+        </div>
+      </header>
+      <div class="insignias">
+        <h2> Projetos da Imersão Dev </h2>
+        <form id="_projects_" class="projects projects-list">
+          <fieldset class="zoom-options">
+            <label class="zoom-container">
+              Zoom
+              <input class="zoom-control" type="number" min="0.7" max="2.4" step="0.1" value="1"
+                oninput="updateCardSize(event)">
+            </label>
+          </fieldset>
+          <div class="project-card">
+            <input type="checkbox" id="project_1" class="item-checkbox" name="projects">
+            <label for="project_1" class="item-label"> 💰 Conversor de Moedas </label>
+            <p class="codepen" data-height="400" data-theme-id="light" data-default-tab="result"
+              data-slug-hash="PojOPjp" data-user="isjacrod"
+              style="height: 400px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+              <span>See the Pen <a href="https://codepen.io/isjacrod/pen/PojOPjp">
+                  Conversor de moedas - ID3</a> by israel (<a href="https://codepen.io/isjacrod">@isjacrod</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+            <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+          </div>
+          <div class="project-card">
+            <input type="checkbox" id="project_2" class="item-checkbox" name="projects">
+            <label for="project_2" class="item-label">🔢 Calculadora de Média</label>
+            <p class="codepen" data-height="400" data-theme-id="light" data-default-tab="result"
+              data-slug-hash="PojKGQr" data-user="isjacrod"
+              style="height: 400px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+              <span>See the Pen <a href="https://codepen.io/isjacrod/pen/PojKGQr">
+                  Calculadora de média</a> by israel (<a href="https://codepen.io/isjacrod">@isjacrod</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+            <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+          </div>
+          <div class="project-card">
+            <input type="checkbox" id="project_3" class="item-checkbox" name="projects">
+            <label for="project_3" class="item-label">🔮 Asagiri Gen: O Mentalista</label>
+            <p class="codepen" data-height="400" data-theme-id="light" data-default-tab="result"
+              data-slug-hash="JjOQVZe" data-user="isjacrod"
+              style="height: 400px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+              <span>See the Pen <a href="https://codepen.io/isjacrod/pen/JjOQVZe">
+                  O mentalista </a> by israel (<a href="https://codepen.io/isjacrod">@isjacrod</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+            <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+          </div>
+          <div class="project-card">
+            <input type="checkbox" id="project_4" class="item-checkbox" name="projects">
+            <label for="project_4" class="item-label">🎬 Animes para mãe assistir</label>
+            <p class="codepen" data-height="400" data-theme-id="light" data-default-tab="result"
+              data-slug-hash="VwPvoer" data-user="isjacrod"
+              style="height: 400px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+              <span>See the Pen <a href="https://codepen.io/isjacrod/pen/VwPvoer">
+                  AnChan</a> by israel (<a href="https://codepen.io/isjacrod">@isjacrod</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+            <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+          </div>
+          <div class="project-card">
+            <input type="checkbox" id="project_5" class="item-checkbox" name="projects">
+            <label for="project_5" class="item-label">🏆 Placar jogo da velha</label>
+            <p class="codepen" data-height="400" data-theme-id="light" data-default-tab="result"
+              data-slug-hash="NWXGzbJ" data-user="isjacrod"
+              style="height: 400px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+              <span>See the Pen <a href="https://codepen.io/isjacrod/pen/NWXGzbJ">
+                  Placar Jogo Da Velha</a> by israel (<a href="https://codepen.io/isjacrod">@isjacrod</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+            <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+          </div>
+          <div class="project-card">
+            <input type="checkbox" id="project_6" class="item-checkbox" name="projects">
+            <label for="project_6" class="item-label">🃏 Pop Trunfo</label>
+            <p class="codepen" data-height="400" data-theme-id="light" data-default-tab="result"
+              data-slug-hash="PoWbPKY" data-user="isjacrod"
+              style="height: 400px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+              <span>See the Pen <a href="https://codepen.io/isjacrod/pen/PoWbPKY">
+                  Pop Trunfo</a> by israel (<a href="https://codepen.io/isjacrod">@isjacrod</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+            <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+          </div>
+          <div class="project-card">
+            <input onclick="resetInputCheck()" type="checkbox" id="project_7" class="item-checkbox" name="projects"
+              checked>
+            <label for="project_7" class="item-label">🌐 Certificard 2</label>
+          </div>
+        </form>
+      </div>
+    </section>
+    <script src="./script.js"></script>
+  </div>
+</body>
+
+</html>
